@@ -20,17 +20,16 @@ def check_value(value_dct):
 
 def exercise1(tp, fp, fn):
     value_dct = {
-        'tp': tp, 
-        'fp': fp, 
+        'tp': tp,
+        'fp': fp,
         'fn': fn
-}
+    }
     result = False
-    if check_type(value_dct) == 1:
-        if check_value(value_dct) == 1:
-            precision = tp / (tp + fp)
-            recall = tp / (tp + fn)
-            f1score = 2 * (precision * recall) / (precision + recall)
-            result = f'''precision is {precision} \nrecall is {recall} \nf1-score is {f1score}'''
+    if check_type(value_dct) == 1 and check_value(value_dct) == 1:
+        precision = tp / (tp + fp)
+        recall = tp / (tp + fn)
+        f1score = 2 * (precision * recall) / (precision + recall)
+        result = f'''precision is {precision} \nrecall is {recall} \nf1-score is {f1score}'''
     return result
 
 

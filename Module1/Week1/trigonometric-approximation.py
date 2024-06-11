@@ -48,9 +48,9 @@ def approx_sinh(x, n):
 
 def approx_cosh(x, n):
     if type(n) != type(1):
-        print(f'n must be an interger')
+        print('n must be an interger')
     elif n <= 0:
-        print(f'n must be greater than zero')
+        print('n must be greater than zero')
     else:
         result = 0
         for idx in range(n+1):
