@@ -5,46 +5,46 @@ def fact(n):
         return 1
     else:
         return n*fact(n-1)
-    
-    
+
+
 def approx_sin(x, n):
     if type(n) != type(1):
-        print(f'n must be an interger')
+        print('n must be an interger')
     elif n <= 0:
-        print(f'n must be greater than zero')
+        print('n must be greater than zero')
     else:
         result = 0
-        for idx in range (n+1):
+        for idx in range(n+1):
             unit = ((-1) ** idx) * (x ** (2*idx + 1)) / fact(2*idx + 1)
             result += unit
         return result
-    
+
 
 def approx_cos(x, n):
     if type(n) != type(1):
-        print(f'n must be an interger')
+        print('n must be an interger')
     elif n <= 0:
-        print(f'n must be greater than zero')
+        print('n must be greater than zero')
     else:
         result = 0
-        for idx in range (n+1):
+        for idx in range(n+1):
             unit = ((-1) ** idx) * (x ** (2*idx)) / fact(2*idx)
             result += unit
         return result
-    
+
 
 def approx_sinh(x, n):
     if type(n) != type(1):
-        print(f'n must be an interger')
+        print('n must be an interger')
     elif n <= 0:
-        print(f'n must be greater than zero')
+        print('n must be greater than zero')
     else:
         result = 0
-        for idx in range (n+1):
+        for idx in range(n+1):
             unit = (x ** (2*idx + 1)) / fact(2*idx + 1)
             result += unit
         return result
-    
+
 
 def approx_cosh(x, n):
     if type(n) != type(1):
@@ -53,7 +53,7 @@ def approx_cosh(x, n):
         print(f'n must be greater than zero')
     else:
         result = 0
-        for idx in range (n+1):
+        for idx in range(n+1):
             unit = (x ** (2*idx)) / fact(2*idx)
             result += unit
         return result
