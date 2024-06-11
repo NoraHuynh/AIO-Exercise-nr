@@ -3,7 +3,7 @@ import math
 
 
 def calculate_uni_loss(y_target, y_pred, loss_name):
-    if loss_name == 'MAE':
+    if loss_name == "MAE":
         loss = math.fabs(y_target - y_pred)
     else:
         loss = (y_target - y_pred) ** 2
@@ -26,10 +26,10 @@ class LossFunction:
         return rmse
 
     def calculate_loss_function(self, n, sum_loss, loss_name):
-        if loss_name.upper() == 'MAE':
+        if loss_name.upper() == "MAE":
             result = self.calculate_mae(n, sum_loss)
             return result
-        elif loss_name.upper() == 'MSE':
+        elif loss_name.upper() == "MSE":
             result = self.calculate_mse(n, sum_loss)
             return result
         else:
@@ -39,15 +39,16 @@ class LossFunction:
 
 def exercise3():
     num_samples = input(
-        'Input number of samples (integer number) which are generated: ')
+        "Input number of samples (integer number) which are generated: "
+    )
     if num_samples.isnumeric() == False:
-        print('number of samples must be an integer number')
+        print("number of samples must be an integer number")
     else:
         n = int(num_samples)
-        loss_name = input('loss name: ')
-        loss_name_lst = ['MAE', 'MSE', 'RMSE']
+        loss_name = input("loss name: ")
+        loss_name_lst = ["MAE", "MSE", "RMSE"]
         if loss_name.upper() not in loss_name_lst:
-            print(f'{loss_name} is not supported')
+            print(f"{loss_name} is not supported")
         else:
             loss_f = LossFunction()
             loss_name = loss_name.upper()
@@ -55,13 +56,13 @@ def exercise3():
             for idx in range(n):
                 y_target = random.uniform(0, 10)
                 y_pred = random.uniform(0, 10)
-                loss = calculate_uni_loss(
-                    y_target, y_pred, loss_name=loss_name)
+                loss = calculate_uni_loss(y_target, y_pred, loss_name=loss_name)
                 print(
-                    f'loss name: {loss_name}, sample: {idx}, pred: {y_pred}, target: {y_target}, loss: {loss}')
+                    f"loss name: {loss_name}, sample: {idx}, pred: {y_pred}, target: {y_target}, loss: {loss}"
+                )
                 sum_loss += loss
             result = loss_f.calculate_loss_function(n, sum_loss, loss_name)
-            print(f'final {loss_name}: {result}')
+            print(f"final {loss_name}: {result}")
 
 
 exercise3()
