@@ -75,7 +75,7 @@ Window position             |   Max
 
 #### 4. Levenshtein distance
 $$
-elu(x) = \begin{cases}
+lev(a,b)) = \begin{cases}
               |a| & if |b| = 0, \\
               |b| & if |a| = 0, \\
               lev(tail(a),tail(b)) & if head(a) = head(b),\\
