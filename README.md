@@ -53,6 +53,7 @@ $$MDnRE = \frac{1}{m}\sum_{i=1}^{m}(\sqrt[n]{y_i}-\sqrt[n]{\hat{y_i}})^{p}$$
 * **Input**: num_list = [3, 4, 5, 1, -44, 5, 10, 12, 33, 1], k = 3\
 * **Output**: [5, 5, 5, 5, 10, 12, 33, 33]\
 * **Explanation**: 
+
 Window position             |   Max
 -|-
 **[3 4 5]** 1 -44 5 10 12 33 1  |    5
