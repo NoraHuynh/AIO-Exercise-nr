@@ -50,9 +50,9 @@ $$MDnRE = \frac{1}{m}\sum_{i=1}^{m}(\sqrt[n]{y_i}-\sqrt[n]{\hat{y_i}})^{p}$$
 ### Week 02
 #### 1. Sliding Window Maximum
 
-**Input**: num_list = [3, 4, 5, 1, -44, 5, 10, 12, 33, 1], k = 3\
-**Output**: [5, 5, 5, 5, 10, 12, 33, 33]\
-**Explanation**: 
+* **Input**: num_list = [3, 4, 5, 1, -44, 5, 10, 12, 33, 1], k = 3\
+* **Output**: [5, 5, 5, 5, 10, 12, 33, 33]\
+* **Explanation**: 
 Window position             |   Max
 -|-
 **[3 4 5]** 1 -44 5 10 12 33 1  |    5
@@ -65,13 +65,13 @@ Window position             |   Max
 3 4 5 1 -44 5 10 **[12 33 1]**  |    33
 
 #### 2. Number of characters
-**Input**: one word [a-z][A-Z] \
-**Output**: a dictionary that counts the occurrences of characters
+* **Input**: one word [a-z][A-Z] \
+* **Output**: a dictionary that counts the occurrences of characters
 
 #### 3. Number of words
 
-**Input**: path to the txt file \
-**Output**: dictionary that counts the occurrences of each word
+* **Input**: path to the txt file \
+* **Output**: dictionary that counts the occurrences of each word
 
 #### 4. Levenshtein distance
 $$
