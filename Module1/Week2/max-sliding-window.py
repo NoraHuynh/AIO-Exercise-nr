@@ -1,8 +1,8 @@
 def max_sliding_window(num_list, k):
     n = len(num_list)
     outpt = []
-    for i in range (n - k + 1):
-        max_num = max(num_list[i:i+k])
+    for i in range(n - k + 1):
+        max_num = max(num_list[i : i + k])
         outpt.append(max_num)
     return outpt
 
