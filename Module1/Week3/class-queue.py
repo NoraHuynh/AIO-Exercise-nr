@@ -1,6 +1,3 @@
-# Question 12
-
-
 class MyQueue:
     def __init__(self, capacity):
         self.__capacity = capacity
